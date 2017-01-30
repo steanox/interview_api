@@ -7,16 +7,16 @@ from api import api
 import operator
 
 app = Flask(__name__)
-# app.config['MONGO_USERNAME'] = 'oktaokat'
-# app.config['MONGO_PASSWORD'] = 'asdasdasd2017'
+app.config['MONGO_USERNAME'] = 'oktaokat'
+app.config['MONGO_PASSWORD'] = 'asdasdasd2017'
 
-# app.config['MONGO_HOST'] = 'ds056419.mlab.com'
-# app.config['MONGO_PORT'] = 56419
-# app.config['MONGO_DBNAME'] = 'okat'
+app.config['MONGO_HOST'] = 'ds056419.mlab.com'
+app.config['MONGO_PORT'] = 56419
+app.config['MONGO_DBNAME'] = 'okat'
 
-app.config['MONGO_HOST'] = 'localhost'
-app.config['MONGO_PORT'] = 27017
-app.config['MONGO_DBNAME'] = 'test'
+# app.config['MONGO_HOST'] = 'localhost'
+# app.config['MONGO_PORT'] = 27017
+# app.config['MONGO_DBNAME'] = 'test'
 
 mongo = PyMongo(app)
 
