@@ -27,11 +27,10 @@ class api():
 	def get_popular_users(self,tweet):
 		tweet = sorted(tweet, key=lambda k: k['total_tweet'],reverse=True)
 		result_length = len(tweet)
-		popular_users = ()
+		popular_users = []
 		for x in range(0,(result_length)):
-			data_result = tweet[x]["fromuser"] + ":" + str(tweet[x]["total_tweet"])
-			popular_users += (data_result,)
-		result_length = len(tweet)
+			popular_users.append({"fromuser":tweet[x]["fromuser"],"total_tweet":tweet[x]["total_tweet"]})
+		# result_length = len(tweet)
 		# popular_users = OrderedDict()
 		# for x in range(0,(result_length)):
 		# 	popular_users.move_to_end({result[x]["fromuser"]:result[x]["total_tweet"]},last=True)
